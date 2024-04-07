@@ -57,14 +57,14 @@ The study evaluated four machine learning classifiers using 5-fold cross-validat
 
 In the context of binary classification where predictions are binary (True or False) against actual Positive (P) and Negative (N) outcomes, performance metrics can be delineated through four outcomes: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). Consequently, Precision (PR), Recall (RC), and Accuracy (ACC) are defined by these formulas: 
 
+![Formula](/images/Formulaes.png)
+
+
 Given the study's focus on evaluating the impact of text vectorization techniques on model performance, Accuracy has been selected as the primary metric. This decision is bolstered by the balanced nature of the dataset (See Figure 3.4), which mitigates the common issue of metric distortion in imbalanced datasets (Sokolova & Lapalme, 2009). Thus, Accuracy provides a straightforward and reliable measure of overall model performance across both positive and negative classifications.
 
 ## 4. Findings
 
-![Figure 3.1: Classifier Performance with Different Vectorization Methods](/images/Table1.png)
-
-
-_Table 3.1: Classifier Performance with Different Vectorization Methods_
+![Table 3.1: Classifier Performance with Different Vectorization Methods](/images/Table1.png)
 
 Table 3.1 provides a comparative analysis of the accuracy scores for various classification models against different vectorization methods. The RF and SVM models emerged as the top performers with accuracies of 84.31% (RF) and 85.00% (SVM) using TF-Idf vectorization, which is consistent with existing literature (Rakhmanov, 2020).
 
@@ -77,216 +77,8 @@ The absence of an accuracy score for Naïve Bayes (NB) with GloVe vectorization 
 RF is determined to be the classifier of choice, when taking into account accuracy and CPU time. Subsequently, a grid search will be employed to refine the parameters, striving to find the RF configuration that optimally combines accuracy and processing speed.
 
 
-**Models**
-**Tf-Idf**
-**NMF**
-**GloVe**
-**Max Depth**
-**No. of Estim.**
-**Accuracy**
-**CPU Time (Seconds)**
-**Max Depth**
-**No. of Estim.**
-**Accuracy**
-**CPU Time (Seconds)**
-**Max Depth**
-**No. of Estim.**
-**Accuracy**
-**CPU Time (Seconds)**
-**Model 1**
-None
-10
-83.45%
-(+/-5%)
-0.185
-None
-10
-81.27%
-(+/-4%)
-0.139
-None
-10
-77.70%
-(+/-6%)
-0.199
-**Model 2**
-None
-100
-84.31%
-(+/-5%)
-1.384
-None
-100
-82.98%
-(+/-5%)
-0.724
-None
-100
-79.92%
-(+/-8%)
-1.009
-**Model 3**
-None
-250
-84.37%
-(+/-5%)
-3.463
-None
-250
-83.12%
-(+/-5%)
-1.658
-None
-250
-80.20%
-(+/-8%)
-3.075
-**Model 4**
-20
-10
-72.49%
-(+/-10%)
-0.092
-20
-10
-78.52%
-(+/-6%)
-0.205
-20
-10
-77.60%
-(+/-7%)
-0.253
-**Model 5**
-20
-100
-76.27%
-(+/-10%)
-0.083
-20
-100
-79.97%
-(+/-6%)
-0.518
-20
-100
-79.90%
-(+/-8%)
-0.962
-**Model 6**
-20
-250
-76.18%
-(+/-9%)
-0.216
-20
-250
-80.00%
-(+/-6%)
-1.227
-20
-250
-80.06%
-(+/-8%)
-2.335
-**Model 7**
-50
-10
-76.77%
-(+/-10%)
-0.062
-50
-10
-80.69%
-(+/-5%)
-0.147
-50
-10
-77.70%
-(+/-6%)
-0.171
-**Model 8**
-50
-100
-80.17%
-(+/-10%)
-0.172
-50
-100
-82.30%
-(+/-6%)
-0.661
-50
-100
-79.91%
-(+/-8%)
-1.021
-**Model 9**
-50
-250
-79.64%
-(+/-10%)
-0.388
-50
-250
-82.48%
-(+/-6%)
-1.559
-50
-250
-80.21%
-(+/-8%)
-2.594
-**Model 10**
-100
-10
-80.86%
-(+/-5%)
-0.080
-100
-10
-81.11%
-(+/-4%)
-0.161
-100
-10
-77.70%
-(+/-6%)
-0.168
-**Model 11**
-100
-100
-82.83%
-(+/-5%)
-0.388
-100
-100
-82.87%
-(+/-5%)
-0.718
-100
-100
-79.92%
-(+/-8%)
-1.034
-**Model 12**
-100
-250
-82.73%
-(+/-5%)
-0.905
-100
-250
-83.05%
-(+/-5%)
-1.685
-100
-250
-80.20%
-(+/-8%)
-2.560
+![Table 3.2: RF Classifier Performance with Hyperparameter Tuning](/images/Table2.png)
 
-_Table 3.2: RF Performance with Hyperparameter Tuning_
 
 Table 3.2 delineates RF classifier's performance following hyperparameter optimization across three vectorization techniques: TF-Idf, NMF, and GloVe. Utilizing a grid search on 12 combinations of tree depths (20, 50, 100, None) and estimators (10, 100, 250), the analysis engaged 5-fold cross-validation to enhance model validation and prevent overfitting. The aim is to pinpoint a configuration marrying high accuracy with low computational cost.
 
@@ -296,24 +88,7 @@ The results underscore a prevalent trend: while increasing the number of estimat
 
 This study demonstrates that the selection of vectorization and model parameters must be strategic, balancing the precision of output against the speed of computation, and should be catered to the particular demands of the use case. The efficiency of the TF-Idf vectorization stands out, offering an effective balance between accuracy and CPU time for the Random Forest classifier.
 
-**Model**
-**Tf-Idf**
-**Accuracy**
-**CPU Time (seconds)**
-**Random Forest (Unigram)**
-83.50%
-(+/-5%)
-0.651
-**Random Forest (Unigram, Bigram)**
-83.80%
-(+/-5%)
-0.616
-**Random Forest (Unigram, Bigram, Trigram)**
-83.85%
-(+/-5%)
-0.701
-
-_Table 3.3: Classifier Performance with Different n-grams_
+![Table 3.3: Classifier Performance with Different n-grams](/images/Table3.png)
 
 Table 3.3 assesses the RF classifier's performance with Model 1 parameters and TF-Idf vectorization with varying n-gram ranges. The study finds a modest increase in accuracy when progressing from unigrams to a combination of unigrams, bigrams, and trigrams, with accuracy inching up from 83.50% to 83.85%, consistent with findings from the literature review (Tumu et al., 2020). Interestingly, the improved accuracy does not necessarily come with increased computational demand; the CPU time required slightly decreases from 0.651 seconds for the unigram model to 0.616 seconds when bigrams are included, before rising to 0.701 seconds for the full unigram-bigram-trigram model. This nuanced finding suggests that a careful selection of n-grams can yield accuracy gains without a proportional rise in CPU time, challenging the common assertion that model complexity invariably leads to higher computational costs. The decision on the n-gram configuration must therefore consider the application's unique requirements for accuracy and processing speed.
 
