@@ -57,7 +57,7 @@ The study evaluated four machine learning classifiers using 5-fold cross-validat
 
 In the context of binary classification where predictions are binary (True or False) against actual Positive (P) and Negative (N) outcomes, performance metrics can be delineated through four outcomes: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). Consequently, Precision (PR), Recall (RC), and Accuracy (ACC) are defined by these formulas: 
 
-![Formula](/images/Formulaes.png)
+![Formula](/images/Formulas.png)
 
 
 Given the study's focus on evaluating the impact of text vectorization techniques on model performance, Accuracy has been selected as the primary metric. This decision is bolstered by the balanced nature of the dataset (See Figure 3.4), which mitigates the common issue of metric distortion in imbalanced datasets (Sokolova & Lapalme, 2009). Thus, Accuracy provides a straightforward and reliable measure of overall model performance across both positive and negative classifications.
