@@ -17,7 +17,7 @@ In a comparative study on word embeddings for text classification, it was found 
 ### 3.1 Data Exploration
 Figure 3.1 provides a structured summary of the dataset used in the analysis, detailing the columns and their respective data types. The dataset comprises 294,240 entries across eight attributes, including overall rating, verification status, review text, and timestamps, among others. Notably, the 'summary' field has fewer non-null values than other columns, suggesting some entries may lack a review summary.
 
-![Figure 3.1: Dataset Overview of Amazon Customer Reviews]((/images/my_image.png "Dataset Overview of Amazon Customer Reviews"))
+![Figure 3.1: Dataset Overview of Amazon Customer Reviews]((/images/Figure1.png "Dataset Overview of Amazon Customer Reviews"))
 
 Figure 3.2 depicts the distribution of overall ratings for a selection of Amazon products. The data show a pronounced tendency towards polarized reviews, with 5-star ratings being the most common at 43.2%, followed by 1-star ratings at 28.8%. The absence of 3-star ratings is notable, indicating a potential data collection peculiarity or an intentional exclusion from the dataset.
 
