@@ -17,19 +17,19 @@ In a comparative study on word embeddings for text classification, it was found 
 ### 3.1 Data Exploration
 Figure 3.1 provides a structured summary of the dataset used in the analysis, detailing the columns and their respective data types. The dataset comprises 294,240 entries across eight attributes, including overall rating, verification status, review text, and timestamps, among others. Notably, the 'summary' field has fewer non-null values than other columns, suggesting some entries may lack a review summary.
 
-![Figure 3.1: Dataset Overview of Amazon Customer Reviews](/images/Figure1.png )
+![Figure 3.1: Dataset Overview of Amazon Customer Reviews](/images/Figure1.png)
 
 Figure 3.2 depicts the distribution of overall ratings for a selection of Amazon products. The data show a pronounced tendency towards polarized reviews, with 5-star ratings being the most common at 43.2%, followed by 1-star ratings at 28.8%. The absence of 3-star ratings is notable, indicating a potential data collection peculiarity or an intentional exclusion from the dataset.
 
-![Figure 3.2: Frequency Distribution of Amazon Customer Reviews](link-to-your-figure-3.2-image)
+![Figure 3.2: Frequency Distribution of Amazon Customer Reviews](/images/Figure2.png)
 
 Figure 3.3 presents a binary classification of review sentiments where 1 and 2-star ratings are designated as negative (0), and 4 and 5-star ratings as positive (1). From the graph, it is observed that the number of positive reviews slightly exceeds negative ones, with counts of 144,240 and 150,000 respectively, indicating a moderately balanced distribution between the two sentiment categories in the dataset.
 
-![Figure 3.3: Outcome Distribution of Amazon Customer Reviews](link-to-your-figure-3.3-image)
+![Figure 3.3: Outcome Distribution of Amazon Customer Reviews](/images/Figure3.png)
 
 Figure 3.4 illustrates the average word count of reviews categorized by Outcome. Negative reviews (0) have a higher average length of 11.81 words, while positive reviews (1) are shorter, with an average of 7.22 words. This suggests that users tend to write longer reviews when expressing negative sentiments.
 
-![Figure 3.4: Analysis of Review Lengths by Outcome](link-to-your-figure-3.4-image)
+![Figure 3.4: Analysis of Review Lengths by Outcome](/images/Figure4.png)
 
 ### 3.2 Preprocessing of Dataset
 Text preprocessing is essential for improving sentiment analysis model performance. The effectiveness of these models relies heavily on the quality of input data. Therefore, preprocessing unstructured user-generated content is crucial. The steps of preprocessing are outlined as follows:
@@ -61,53 +61,8 @@ Given the study's focus on evaluating the impact of text vectorization technique
 
 ## 4. Findings
 
-**Model**
-**Tf-Idf**
-**NMF**
-**GloVe**
-**Accuracy**
-**CPU Time (seconds)**
-**Accuracy**
-**CPU Time (seconds)**
-**Accuracy**
-**CPU Time (seconds)**
-**Random Forest**
-84.31%
-(+/-2.5%)
-1.98
-82.98% (+/-5%)
-0.86 
-79.92%
-(+/-8%)
-1.10
-**Support Vector Machines**
-85.00%
-(+/-3%)
-21.4
-80%
-(+/-4%)
-52.1
-81.48%
-(+/-7%)
-25.5
-**Naïve Bayes**
-79.89%
-(+/-4%)
-0.11
-71.45%
-(+/-10%)
-0.19
-N/A
-**Gradient Boosting**
-79.53%
-(+/-1%)
-0.31
-80.94%
-(+/-4%)
-1.60
-77.83%
-(+/-9%)
-3.90
+![Figure 3.1: Classifier Performance with Different Vectorization Methods](/images/Table1.png)
+
 
 _Table 3.1: Classifier Performance with Different Vectorization Methods_
 
